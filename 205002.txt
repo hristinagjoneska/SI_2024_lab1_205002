@@ -1,0 +1,78 @@
+4. cd Desktop
+//го менуваме директориумот да е десктоп, затоа што таму се бара да е направен локалниот директориум
+mkdir SI_2024_lab1_205002
+//правиме директорим со исто име како оддалечениот репозиториум
+cd SI_2024_lab1_205002
+//влегуваме во тој директориум за да може во него да работиме
+
+git init //го иницијализираме
+
+5. git remote add origin https://github.com/gjoneskah/SI_2024_lab1_205002.git 
+//ги поврзуваме локалниот и оддалечениот репозиториум, го додаваме оддалечениот репозиториум на локалниот
+6. echo "Hristina Gjoneska 205002" > README.md
+
+git add README.md
+
+git commit -m "Initial commit"
+
+7. git add SILab1_1.java SILab1_2.java SILab1Main.java
+git commit -m "Add starter code"
+
+8. git push origin --all
+
+9. git checkout -b bug1 master
+git checkout -b bug2 master
+
+//правиме две гранки од мастер, со кои ќе ги адресираме двете грешки кои 
+треба да се поправат во давата фајлови
+
+10.git checkout bug1  //одиме на првата гранка
+11. git add SILab1_1.java
+git commit -m "Fix wrong condition in filterOddLengthStrings"
+//правиме измена во првата гранка и после таа ја снимаме 
+со соодветен текст
+12. git checkout bug2 //се префрламе на втората гранка
+13. git add SILab1_2.java
+git commit -m "Fix wrong condition in makeBigStringFrom"
+//исто така правиме измена и го снимаме напредокот
+
+14. git checkout bug1
+//се враќаме на првата гранка
+
+15. git add SILab1Main.java
+git commit -m "Call method filterOddLengthStrings in main class"
+//го додаваме мануелно повикот во главната класа и повторно 
+ја забележуваме промоената со соодветен текст
+
+16. git checkout bug2
+// се враќаме на гранка 2
+
+17. git add SILab1Main.java
+git commit -m "Call method makeBigStringFrom in main class"
+//правиме модификација на класата и ја зачувуваме промената
+
+18. git add README.md
+git push origin –all
+19. git checkout master
+// се префрламе на гранката мастер
+
+20. git merge bug1
+//правиме спојување со прбата гранка
+
+21. git push origin –all
+//ги синхронизираме сите
+
+22. git checkout bug2
+//се префрламе на втората гранка
+
+23. git rebase master
+//правиме rebase на master
+
+24. git checkout master
+//се префрламе на мастер гранката
+
+25. git merge bug2
+//ја спојуваме втората гранка 
+
+26. git push origin --all --force
+//правиме синхронизација на сите гранки

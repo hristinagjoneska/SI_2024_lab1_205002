@@ -1,0 +1,208 @@
+Microsoft Windows [Version 10.0.19045.4291]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\admin>git --version
+git version 2.44.0.windows.1
+
+C:\Users\admin>cd Desktop
+
+C:\Users\admin\Desktop>mkdir SI_2024_lab1_205002
+
+C:\Users\admin\Desktop>cd SI_2024_lab1_205002
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git init
+Initialized empty Git repository in C:/Users/admin/Desktop/SI_2024_lab1_205002/.git/
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git remote add origin https://github.com/hristinagjoneska/SI_2024_lab1_205002
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>echo "Hristina Gjoneska 205002" > README.md
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git add README.md
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git commit -m "Initial commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'admin@DESKTOP-7QI7C36.(none)')
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git config --global user.email "hristina.gjoneska@students.finki.ukim.mk"
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git config --global user.name "hristinagjoneska"
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git commit -m "Initial commit"
+[master (root-commit) c18bdca] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git add SILab1_1.java SILab1_2.java SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>warning: LF will be replaced by CRLF in SILab1Main.java.git add SILab1_1.java SILab1_2.java SILab1Main.java
+'warning:' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git add SILab1_1.java SILab1_2.java SILab1Main.java
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git commit -m "Add starter code"
+[master 46d88bc] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout -b bug1 master
+M       SILab1_1.java
+M       SILab1_2.java
+Switched to a new branch 'bug1'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout -b bug2 master
+M       SILab1_1.java
+M       SILab1_2.java
+Switched to a new branch 'bug2'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout bug1
+M       SILab1_1.java
+M       SILab1_2.java
+Switched to branch 'bug1'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 413882b] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout bug2
+M       SILab1_2.java
+Switched to branch 'bug2'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git commit -m "Fix wrong condition in makeBigStringFrom"
+[bug2 8a36003] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout bug1
+Switched to branch 'bug1'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 3065490] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout bug2
+Switched to branch 'bug2'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git add SILab1Main.java
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git commit -m "Call method makeBigStringFrom in main class"
+[bug2 5fcc120] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git push origin --all
+info: please complete authentication in your browser...
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git push origin --all
+info: please complete authentication in your browser...
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (20/20), 2.19 KiB | 89.00 KiB/s, done.
+Total 20 (delta 9), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/hristinagjoneska/SI_2024_lab1_205002
+ * [new branch]      bug1 -> bug1
+ * [new branch]      bug2 -> bug2
+ * [new branch]      master -> master
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout master
+Switched to branch 'master'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git merge bug1
+Updating 46d88bc..3065490
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git push origin --all
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/hristinagjoneska/SI_2024_lab1_205002
+   46d88bc..3065490  master -> master
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout bug2
+Switched to branch 'bug2'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply 5fcc120... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 5fcc120... Call method makeBigStringFrom in main class
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git rebase master
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git rebase --continue
+SILab1Main.java: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git add SILab1Main.java
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git commit -m "Fixing conflict in main"
+[detached HEAD 6916938] Fixing conflict in main
+ 1 file changed, 4 insertions(+)
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git rebase --continue
+Successfully rebased and updated refs/heads/bug2.
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git checkout master
+Switched to branch 'master'
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git merge bug2
+Updating 3065490..6916938
+Fast-forward
+ SILab1Main.java | 4 ++++
+ SILab1_2.java   | 2 +-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>git push origin --all --force
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 665 bytes | 133.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/hristinagjoneska/SI_2024_lab1_205002
+ + 5fcc120...6916938 bug2 -> bug2 (forced update)
+   3065490..6916938  master -> master
+
+C:\Users\admin\Desktop\SI_2024_lab1_205002>
