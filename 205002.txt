@@ -51,13 +51,13 @@ git commit -m "Call method filterOddLengthStrings in main class"
 git commit -m "Call method makeBigStringFrom in main class"
 //правиме модификација на класата и ја зачувуваме промената
 
-18. git add README.md
-git push origin –all
+18. git push origin –all
+
 19. git checkout master
 // се префрламе на гранката мастер
 
 20. git merge bug1
-//правиме спојување со прбата гранка
+//правиме спојување со прбата гранка, немаме конфлик овде
 
 21. git push origin –all
 //ги синхронизираме сите
@@ -66,13 +66,13 @@ git push origin –all
 //се префрламе на втората гранка
 
 23. git rebase master
-//правиме rebase на master
+//правиме rebase на master, но ни се јавува конфликт затоа што на иста линија имаме два различни кода. затоа мораме прво мануелно да го решиме конфликтот. Ги зачувуваме двата кодови на различна линија и повикуваме git add и git commit со поправената верзија од Main функцијата
 
 24. git checkout master
 //се префрламе на мастер гранката
 
 25. git merge bug2
-//ја спојуваме втората гранка 
+//ја спојуваме втората гранка ; после разрешување на конфликтот погоре, можеме да го направиме спојувањето
 
 26. git push origin --all --force
 //правиме синхронизација на сите гранки
